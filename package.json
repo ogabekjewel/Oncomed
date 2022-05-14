@@ -1,0 +1,33 @@
+{
+  "name": "medic",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000O\u0000n\u0000c\u0000o\u0000m\u0000e\u0000d\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogabekjewel/Oncomed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogabekjewel/Oncomed/issues"
+  },
+  "homepage": "https://github.com/ogabekjewel/Oncomed#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "uuid": "^8.3.2"
+  }
+}
