@@ -4,7 +4,7 @@ const doctors = require("../model/DoctorsModel")
 const path = require("path")
 const news = require("../model/NewsModel")
 const { compareHash } = require("../modules/bcrypt")
-const { generateToken } = require("../modules/jwt")
+const { generateToken, checkToken } = require("../modules/jwt")
 
 module.exports = class AdminController {
     static async LoginPOST(req, res) {
@@ -36,34 +36,6 @@ module.exports = class AdminController {
             })
         }
     }
-
-    // static async AdminPost(req, res) {
-    //     try {
-    //         const { email, password } = req.body
-            
-    //         const user = await admins.findOne({
-    //             email,
-    //         })
-
-    //         if(user) throw new Error("email already registered")
-            
-    //         await admins.create({
-    //             id: v4(),
-    //             email,
-    //             password,
-    //         })
-
-    //         res.status(201).json({
-    //             ok: true,
-    //         })
-    //     } catch(e) {
-    //         res.status(400).json({
-    //             ok: false,
-    //             message: e + "",
-    //         })
-    //         console.log(e)
-    //     }
-    // }
 
     static async DoctorPOST(req, res) {
         try {
