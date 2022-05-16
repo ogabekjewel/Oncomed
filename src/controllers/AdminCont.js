@@ -72,6 +72,7 @@ module.exports = class AdminController {
 
             res.status(201).json({
                 ok: true,
+                message: "Doctor created"
             })
         } catch(e) {
             console.log(e)
@@ -210,7 +211,6 @@ module.exports = class AdminController {
     static async NewsPOST(req, res) {
         try {
             const { title, body, date } = req.body
-            console.log(title, body, date, req.files.img)
             let newElement = await news.create({
                 id: v4(),
                 title,
