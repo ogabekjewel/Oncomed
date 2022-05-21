@@ -24,7 +24,7 @@ module.exports = class AdminController {
                 role: "admin",
             })
 
-            res.cookie("token", token).json({
+            res.cookie("token", token).status(200).json({
                 ok: true,
                 token,
             })

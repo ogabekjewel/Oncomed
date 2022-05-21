@@ -1,20 +1,20 @@
 const { DoctorPOST, DoctorGET, DoctorsGET, DoctorPATCH, DoctorDELETE, NewsPOST, NewsGET, NewsDELETE, NewsPATCH, NewGET } = require("../controllers/AdminCont")
-const AdminMiddlewares = require("../middlewares/AdminMiddlewares")
+// const AdminMiddlewares = require("../middlewares/AdminMiddlewares")
 
 const router = require("express").Router()
 
-router.post("/doctors", AdminMiddlewares, DoctorPOST)
-router.get("/doctors", AdminMiddlewares, DoctorGET)
-router.get("/doctors/all", AdminMiddlewares, DoctorsGET)
-router.patch("/doctors", AdminMiddlewares, DoctorPATCH)
-router.delete("/doctors", AdminMiddlewares, DoctorDELETE)
+router.post("/doctors", DoctorPOST)
+router.get("/doctors", DoctorGET)
+router.get("/doctors/all", DoctorsGET)
+router.patch("/doctors", DoctorPATCH)
+router.delete("/doctors", DoctorDELETE)
 
 
-router.post("/news",AdminMiddlewares, NewsPOST)
-router.get("/news",AdminMiddlewares, NewGET)
-router.get("/news/allnews",AdminMiddlewares, NewsGET)
-router.delete("/news",AdminMiddlewares, NewsDELETE)
-router.patch("/news",AdminMiddlewares, NewsPATCH)
+router.post("/news", NewsPOST)
+router.get("/news", NewGET)
+router.get("/news/allnews", NewsGET)
+router.delete("/news", NewsDELETE)
+router.patch("/news", NewsPATCH)
 
 module.exports = {
     path: "/",

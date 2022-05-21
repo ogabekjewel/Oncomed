@@ -1,11 +1,11 @@
-const { LoginPOST, AdminPost } = require("../controllers/AdminCont")
-const AdminMiddlewares = require("../middlewares/AdminMiddlewares")
+// const { LoginPOST, AdminPost } = require("../controllers/AdminCont")
+// const AdminMiddlewares = require("../middlewares/AdminMiddlewares")
 
-const router = require("express").Router()
+// const router = require("express").Router()
 
-router.post("/", LoginPOST)
+// router.post("/", LoginPOST)
 
-module.exports = {
-    path: "/admin",
-    router,
-}    
+// module.exports = {
+//     path: "/admin",
+//     router,
+// }    
