@@ -7,13 +7,13 @@ router.post("/doctors", DoctorPOST)
 router.get("/doctors", DoctorGET)
 router.get("/doctors/all", DoctorsGET)
 router.patch("/doctors", DoctorPATCH)
-router.delete("/doctors", DoctorDELETE)
+router.delete("/doctors/:id", DoctorDELETE)
 
 
 router.post("/news", NewsPOST)
 router.get("/news", NewGET)
 router.get("/news/allnews", NewsGET)
-router.delete("/news", NewsDELETE)
+router.delete("/news/:id", NewsDELETE)
 router.patch("/news", NewsPATCH)
 
 module.exports = {

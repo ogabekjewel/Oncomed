@@ -183,7 +183,7 @@ module.exports = class AdminController {
 
     static async DoctorDELETE(req, res) {
         try {
-            const { id } = req.body
+            const { id } = req.params
 
             const doctor = await doctors.findOne({
                 id,
@@ -294,7 +294,7 @@ module.exports = class AdminController {
 
     static async NewsDELETE(req, res) {
         try {
-            const { id } = req.body
+            const { id } = req.params
 
             let newElement = await news.findOne({
                 id,
